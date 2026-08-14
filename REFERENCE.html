@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Structure & File Reference</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: #764ba2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #25b1cc;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .file-box {
+            background: #f8f9fa;
+            border-left: 4px solid #25b1cc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+        
+        .file-name {
+            font-weight: bold;
+            color: #0f0e46;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+        }
+        
+        .file-desc {
+            color: #6c6b70;
+            margin-top: 8px;
+            font-size: 0.95em;
+        }
+        
+        .key-sections {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+        
+        .class-ref {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+        
+        .color-box {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        ul {
+            margin-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+        }
+        
+        tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+        
+        .tip {
+            background: #cfe8fc;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+        
+        .tip::before {
+            content: "💡 TIP: ";
+            font-weight: bold;
+            color: #1976d2;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Tourism Website - Project Reference Guide</h1>
+        
+        <h2>📁 File Structure</h2>
+        
+        <div class="file-box">
+            <div class="file-name">index.html</div>
+            <div class="file-desc">
+                <strong>Main HTML file (400+ lines)</strong>
+                <ul style="margin-top: 10px;">
+                    <li>Semantic HTML5 structure</li>
+                    <li>Meta tags for SEO and responsiveness</li>
+                    <li>5 main sections: Home, Favorites, and 4 Detailed Views</li>
+                    <li>Bootstrap 4.5 integration for components</li>
+                    <li>Image carousels using Bootstrap carousel component</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="file-box">
+            <div class="file-name">index.css</div>
+            <div class="file-desc">
+                <strong>Professional styling (600+ lines)</strong>
+                <ul style="margin-top: 10px;">
+                    <li>Mobile-first responsive design</li>
+                    <li>Smooth animations and transitions</li>
+                    <li>Three responsive breakpoints</li>
+                    <li>Professional color scheme</li>
+                    <li>Hover effects and visual feedback</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="file-box">
+            <div class="file-name">script.js</div>
+            <div class="file-desc">
+                <strong>JavaScript functionality</strong>
+                <ul style="margin-top: 10px;">
+                    <li>Section navigation display() function</li>
+                    <li>Smooth scroll behavior</li>
+                    <li>Keyboard shortcuts (H for home)</li>
+                    <li>Scroll animation triggers</li>
+                    <li>Well-commented and organized</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="file-box">
+            <div class="file-name">README.md</div>
+            <div class="file-desc">
+                <strong>Complete project documentation</strong>
+                <ul style="margin-top: 10px;">
+                    <li>Feature overview</li>
+                    <li>Installation instructions</li>
+                    <li>Technology stack</li>
+                    <li>Customization guide</li>
+                    <li>Troubleshooting section</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="file-box">
+            <div class="file-name">SETUP_GUIDE.md</div>
+            <div class="file-desc">
+                <strong>Setup and deployment guide</strong>
+                <ul style="margin-top: 10px;">
+                    <li>Quick start checklist</li>
+                    <li>Customization instructions</li>
+                    <li>Deployment options</li>
+                    <li>Testing procedures</li>
+                    <li>Performance optimization tips</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>🎨 CSS Classes & Styling</h2>
+        
+        <h3>Main Sections</h3>
+        <div class="class-ref">
+            #sectionHome<br>
+            #sectionFavouritePlaces<br>
+            #sectionTajMahalDetailedView<br>
+            #sectionGoldenTempleDetailedView<br>
+            #sectionMysorePalaceDetailedView<br>
+            #sectionVaranasiTempleDetailedView
+        </div>
+        
+        <h3>Key CSS Classes</h3>
+        <table>
+            <tr>
+                <th>Class Name</th>
+                <th>Purpose</th>
+                <th>Used For</th>
+            </tr>
+            <tr>
+                <td><code>.bg-container</code></td>
+                <td>Hero background</td>
+                <td>Home page main container</td>
+            </tr>
+            <tr>
+                <td><code>.tourism-card</code></td>
+                <td>Home card styling</td>
+                <td>Main call-to-action card</td>
+            </tr>
+            <tr>
+                <td><code>.button</code></td>
+                <td>Custom button</td>
+                <td>All primary action buttons</td>
+            </tr>
+            <tr>
+                <td><code>.favourite-place-card-container</code></td>
+                <td>Destination card</td>
+                <td>Each tourist destination</td>
+            </tr>
+            <tr>
+                <td><code>.detailed-view-card-container</code></td>
+                <td>Detail page card</td>
+                <td>Carousel + description</td>
+            </tr>
+        </table>
+        
+        <h2>🎨 Color Palette</h2>
+        
+        <table>
+            <tr>
+                <th>Color</th>
+                <th>Hex Code</th>
+                <th>Usage</th>
+            </tr>
+            <tr>
+                <td><span class="color-box" style="background: #25b1cc;"></span> Teal/Cyan</td>
+                <td><code>#25b1cc</code></td>
+                <td>Buttons, accents, highlights</td>
+            </tr>
+            <tr>
+                <td><span class="color-box" style="background: #0f0e46;"></span> Navy</td>
+                <td><code>#0f0e46</code></td>
+                <td>Headings, primary text</td>
+            </tr>
+            <tr>
+                <td><span class="color-box" style="background: #6c6b70;"></span> Gray</td>
+                <td><code>#6c6b70</code></td>
+                <td>Descriptions, secondary text</td>
+            </tr>
+            <tr>
+                <td><span class="color-box" style="background: #f8f9fa;"></span> Light Gray</td>
+                <td><code>#f8f9fa</code></td>
+                <td>Page background</td>
+            </tr>
+            <tr>
+                <td><span class="color-box" style="background: #ffffff; border: 1px solid #ddd;"></span> White</td>
+                <td><code>#ffffff</code></td>
+                <td>Card backgrounds</td>
+            </tr>
+        </table>
+        
+        <h2>📱 Responsive Breakpoints</h2>
+        
+        <div class="class-ref">
+            Desktop: 1200px and above<br>
+            Tablet: 769px - 1199px<br>
+            Mobile: 480px - 768px<br>
+            Small Mobile: Below 480px
+        </div>
+        
+        <h2>🔧 JavaScript Functions</h2>
+        
+        <h3>display(sectionId)</h3>
+        <div class="code-block">
+function display(sectionId) {<br>
+&nbsp;&nbsp;// Hide all sections<br>
+&nbsp;&nbsp;// Show selected section<br>
+&nbsp;&nbsp;// Scroll to top smoothly<br>
+}
+        </div>
+        <p><strong>Usage:</strong> <code>&lt;button onclick="display('sectionFavouritePlaces')"&gt;</code></p>
+        
+        <div class="tip">
+            Add new sections with a unique ID, then call display() with that ID to navigate.
+        </div>
+        
+        <h2>🚀 Performance Features</h2>
+        
+        <ul>
+            <li><strong>Background Images:</strong> Using CDN for fast delivery</li>
+            <li><strong>CSS Animations:</strong> GPU-accelerated transitions</li>
+            <li><strong>Responsive Images:</strong> Automatic scaling for all devices</li>
+            <li><strong>Smooth Scrolling:</strong> JavaScript scroll behavior</li>
+            <li><strong>Minimal JS:</strong> Lightweight vanilla JavaScript</li>
+        </ul>
+        
+        <h2>✅ Quick Customization</h2>
+        
+        <h3>Change Primary Color</h3>
+        <div class="code-block">
+Find: #25b1cc<br>
+Replace with: [Your color]<br>
+Affects: Buttons, accents, highlights
+        </div>
+        
+        <h3>Change Heading Color</h3>
+        <div class="code-block">
+Find: #0f0e46<br>
+Replace with: [Your color]<br>
+Affects: All main headings
+        </div>
+        
+        <h3>Add New Destination</h3>
+        <div class="code-block">
+1. Add section in index.html<br>
+2. Add CSS classes in index.css<br>
+3. Link from favorites section<br>
+4. Add carousel with images
+        </div>
+        
+        <h2>📊 Browser Support</h2>
+        
+        <table>
+            <tr>
+                <th>Browser</th>
+                <th>Version</th>
+                <th>Support</th>
+            </tr>
+            <tr>
+                <td>Chrome</td>
+                <td>Latest</td>
+                <td>✅ Full Support</td>
+            </tr>
+            <tr>
+                <td>Firefox</td>
+                <td>Latest</td>
+                <td>✅ Full Support</td>
+            </tr>
+            <tr>
+                <td>Safari</td>
+                <td>11+</td>
+                <td>✅ Full Support</td>
+            </tr>
+            <tr>
+                <td>Edge</td>
+                <td>Latest</td>
+                <td>✅ Full Support</td>
+            </tr>
+            <tr>
+                <td>IE 11</td>
+                <td>11</td>
+                <td>⚠️ Limited</td>
+            </tr>
+        </table>
+        
+        <h2>📝 SEO Elements</h2>
+        
+        <ul>
+            <li><strong>Title Tag:</strong> Descriptive and keyword-rich</li>
+            <li><strong>Meta Description:</strong> Engaging summary for search results</li>
+            <li><strong>Meta Keywords:</strong> Relevant tourism-related terms</li>
+            <li><strong>Semantic HTML:</strong> Proper heading hierarchy</li>
+            <li><strong>Alt Text:</strong> Images have descriptive text</li>
+            <li><strong>Open Graph:</strong> Social media sharing (optional)</li>
+        </ul>
+        
+        <div class="tip">
+            Update meta tags in index.html to match your specific content for better SEO rankings.
+        </div>
+        
+        <h2>🔗 External Libraries</h2>
+        
+        <ul>
+            <li><strong>Bootstrap 4.5:</strong> Responsive grid and components (CDN)</li>
+            <li><strong>jQuery:</strong> Required for Bootstrap functionality (CDN)</li>
+            <li><strong>Popper.js:</strong> Dropdown positioning library (CDN)</li>
+            <li><strong>Google Fonts:</strong> Roboto font family (CDN)</li>
+        </ul>
+        
+        <h2>📞 Useful Resources</h2>
+        
+        <ul>
+            <li><a href="https://getbootstrap.com" target="_blank">Bootstrap Documentation</a> - Component reference</li>
+            <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a> - HTML/CSS/JS reference</li>
+            <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a> - Advanced styling techniques</li>
+            <li><a href="https://fonts.google.com" target="_blank">Google Fonts</a> - Font selection</li>
+            <li><a href="https://caniuse.com" target="_blank">Can I Use</a> - Browser compatibility checker</li>
+        </ul>
+        
+        <footer>
+            <p>Tourism Website - Professional Edition v2.0</p>
+            <p>For more information, see README.md and SETUP_GUIDE.md</p>
+        </footer>
+    </div>
+</body>
+</html>

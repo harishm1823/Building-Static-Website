@@ -1,97 +1,491 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
 
-.bg-container {
-  background-image: url("https://d2clawv67efefq.cloudfront.net/ccbp-static-website/goa-c2-img.png");
-  height: 90vh;
-  background-size: cover;
+/* ============================================
+   Global Styles
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html, body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Hide sections by default */
+#sectionFavouritePlaces,
+#sectionTajMahalDetailedView,
+#sectionGoldenTempleDetailedView,
+#sectionMysorePalaceDetailedView,
+#sectionVaranasiTempleDetailedView {
+  display: none;
+}
+
+/* ============================================
+   Home Section
+   ============================================ */
+#sectionHome {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.bg-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://d2clawv67efefq.cloudfront.net/ccbp-static-website/goa-c2-img.png");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 .tourism-card {
   text-align: center;
   background-color: white;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  padding: 5px;
+  border-radius: 16px;
+  padding: 70px 60px;
+  max-width: 700px;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.6s ease-out;
 }
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-heading {
+  font-family: "Roboto", sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: #0f0e46;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.paragraph {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  color: #6c6b70;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
 .button {
   color: white;
   background-color: #25b1cc;
-  width: 138px;
-  height: 36px;
-  border-width: 0px;
-  border-radius: 20px;
+  width: 180px;
+  height: 56px;
+  border: none;
+  border-radius: 28px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(37, 177, 204, 0.35);
 }
-.main-heading {
-  font-family: "Roboto";
+
+.button:hover {
+  background-color: #1a8aa5;
+  box-shadow: 0 8px 20px rgba(37, 177, 204, 0.45);
+  transform: translateY(-3px);
 }
-.paragraph {
-  font-family: "Roboto";
+
+.button:active {
+  transform: translateY(0);
 }
+
+/* ============================================
+   Favourite Places Section
+   ============================================ */
 .favourite-places-bg-container {
-  background-image: url("https://d2clawv67efefq.cloudfront.net/ccbp-static-website/towerbg.png");
-  height: 200vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://d2clawv67efefq.cloudfront.net/ccbp-static-website/towerbg.png");
   background-size: cover;
-  padding: 24px;
+  background-attachment: fixed;
+  padding: 50px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
+
 .favourite-places-heading {
   color: white;
-  font-family: "Roboto";
-  font-size: 28px;
-  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
+
 .favourite-place-card-container {
   background-color: white;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 15px;
+  border-radius: 16px;
+  padding: 35px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-width: 850px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 200px;
 }
+
+.favourite-place-card-container:hover {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+}
+
 .favourite-place-card-heading {
   color: #0f0e46;
-  font-family: "Roboto";
-  font-size: 23px;
-  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
 }
+
 .favourite-place-card-description {
   color: #6c6b70;
-  font-family: "Roboto";
-  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0;
 }
+
 .favourite-place-card-image {
-  width: 80px;
-  height: 100px;
-  margin-left: 25px;
+  width: 160px;
+  height: 200px;
+  border-radius: 12px;
+  margin-left: 30px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.favourite-place-card-text-container {
-  margin-right: 15px;
+
+.favourite-places-bg-container .btn-dark {
+  display: block;
+  margin: 50px auto 0;
+  padding: 16px 48px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #0f0e46;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
+
+.favourite-places-bg-container .btn-dark:hover {
+  background-color: #25b1cc;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 177, 204, 0.35);
+}
+
+/* ============================================
+   Detailed View Section
+   ============================================ */
 .detailed-view-bg-container {
-  background-image: url("https://d2clawv67efefq.cloudfront.net/ccbp-static-website/seabg.png");
-  height: 210vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://d2clawv67efefq.cloudfront.net/ccbp-static-website/seabg.png");
   background-size: cover;
+  background-attachment: fixed;
+  padding: 50px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
+
 .detailed-view-heading {
   color: white;
-  font-family: "Roboto";
-  font-size: 28px;
-  font-weight: bold;
-  padding: 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
+
 .detailed-view-card-container {
   background-color: white;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-  margin: 24px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 auto 50px;
+  max-width: 1000px;
+  width: 90%;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
 }
+
+.detailed-view-card-container .carousel {
+  background-color: #f0f0f0;
+  min-height: 500px;
+}
+
+.detailed-view-card-container .carousel img {
+  object-fit: cover;
+  height: 500px;
+}
+
+.carousel-indicators li {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.carousel-indicators li.active {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+  filter: invert(1);
+  opacity: 0.5;
+  width: auto;
+  height: auto;
+}
+
+.detailed-view-card-text-container {
+  padding: 45px;
+}
+
 .detailed-view-card-heading {
   color: #0f0e46;
-  font-family: "Roboto";
-  font-size: 23px;
-  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
 }
+
 .detailed-view-card-description {
   color: #6c6b70;
-  font-family: "Roboto";
-  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  line-height: 1.9;
+  margin: 0;
 }
-.detailed-view-card-text-container {
-  padding: 16px;
+
+.detailed-view-bg-container .btn-dark {
+  display: block;
+  margin: 0 auto;
+  padding: 16px 48px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #0f0e46;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.detailed-view-bg-container .btn-dark:hover {
+  background-color: #25b1cc;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 177, 204, 0.35);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+  .bg-container {
+    height: 100vh;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .tourism-card {
+    padding: 50px 30px;
+    max-width: 100%;
+  }
+
+  .main-heading {
+    font-size: 36px;
+  }
+
+  .paragraph {
+    font-size: 16px;
+  }
+
+  .button {
+    width: 140px;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .favourite-places-bg-container,
+  .detailed-view-bg-container {
+    padding: 30px 15px;
+  }
+
+  .favourite-places-heading,
+  .detailed-view-heading {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .favourite-place-card-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+    margin-bottom: 20px;
+    min-height: auto;
+    max-width: 100%;
+  }
+
+  .favourite-place-card-heading {
+    font-size: 26px;
+  }
+
+  .favourite-place-card-description {
+    font-size: 15px;
+  }
+
+  .favourite-place-card-image {
+    width: 100%;
+    height: 250px;
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .detailed-view-card-container {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .detailed-view-card-container .carousel {
+    min-height: 350px;
+  }
+
+  .detailed-view-card-container .carousel img {
+    height: 350px;
+  }
+
+  .detailed-view-card-text-container {
+    padding: 30px;
+  }
+
+  .detailed-view-card-heading {
+    font-size: 28px;
+  }
+
+  .detailed-view-card-description {
+    font-size: 15px;
+  }
+
+  .detailed-view-bg-container .btn-dark,
+  .favourite-places-bg-container .btn-dark {
+    width: 140px;
+    height: 44px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 28px;
+  }
+
+  .tourism-card {
+    padding: 35px 20px;
+  }
+
+  .button {
+    width: 120px;
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .favourite-places-heading,
+  .detailed-view-heading {
+    font-size: 28px;
+  }
+
+  .favourite-place-card-heading,
+  .detailed-view-card-heading {
+    font-size: 22px;
+  }
+
+  .favourite-place-card-description,
+  .detailed-view-card-description {
+    font-size: 14px;
+  }
+
+  .favourite-places-bg-container,
+  .detailed-view-bg-container {
+    padding: 20px 10px;
+  }
+
+  .favourite-place-card-container {
+    padding: 20px;
+  }
+
+  .detailed-view-card-text-container {
+    padding: 20px;
+  }
+
+  .detailed-view-card-container .carousel {
+    min-height: 280px;
+  }
+
+  .detailed-view-card-container .carousel img {
+    height: 280px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+  body {
+    background-color: white;
+  }
+
+  .bg-container,
+  .favourite-places-bg-container,
+  .detailed-view-bg-container {
+    background-image: none;
+  }
 }

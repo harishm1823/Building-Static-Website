@@ -1,0 +1,58 @@
+# Git Ignore File - Tourism Website
+
+# System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+.env.local
+
+# IDE & Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.atom/
+*.code-workspace
+
+# Node (if using npm/build tools in future)
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-error.log*
+
+# Build & Distribution
+dist/
+build/
+*.min.js
+*.min.css
+*.map
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary Files
+*.tmp
+*.temp
+.tmp/
+temp/
+
+# Logs
+logs/
+*.log
+
+# Optional: Local development files
+local-config.js
+secrets.json
+.env
+
+# OS Specific
+.AppleDouble
+.LSOverride
