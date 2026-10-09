@@ -407,7 +407,7 @@ body {
   .detailed-view-card-container .carousel img {
     width: 100%;
     height: auto;
-    min-height: 280px;
+    min-height: 281px;
     object-fit: cover;
   }
 
